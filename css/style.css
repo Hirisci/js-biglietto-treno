@@ -5,49 +5,87 @@
  :root{
     /*- COLORI PRIMARIO -*/
     --clr-primary-0: black;
+    --clr-primary-1: blue;
 
     /*- COLORI SECONDARIO -*/
     --clr-secondary-0: white;
 
     /*- DIMENSIONI GUTTER*/
-    --gutter-xs: .25rem
+    --gutter-xs: .25rem;
     --gutter-sm: .5rem;
     --gutter-md: 1rem;
     --gutter-lg: 1.5rem;
     --gutter-xl: 2rem;
     --gutter-xxl: 3rem;
 
+    --border-radius: 1rem;
+
 }
 
 /*╔═══════════════╗
        DEBUG
   ╚═══════════════╝*/
-  .debug header{
-      background-color: aqua;
-  }
-
-  .debug aside{
-      background-color: black;
-  }
-
-  .debug .content{
-      background-color: coral;
-  }
   
-  .debug footer{
-      background-color: brown;
-  }
   
 /*╔═══════════════╗
        COMMON
   ╚═══════════════╝*/
 body{
-    font-family: 'rotobo' sans-serif;
+    font-family: 'rotobo', sans-serif;
     color: var(--colore-testo);
+    display: grid;
+    place-items: center;
+    height: 100vh;
 }
 
 
 /*╔═══════════════╗
     TAG SEMANTICI
   ╚═══════════════╝*/
-/*  */
+
+.ticket{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 3fr 25px 1fr;
+}
+
+.ticket-info, .ticket-cost{
+    place-self: center stretch;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: bisque;
+}
+
+.ticket-info__head,.ticket-info__footer{
+    padding: var(--gutter-sm);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+
+}
+
+
+.ticket-cut{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: var(--border-radius);
+    background-color: bisque;
+    padding: var(--gutter-md);
+}
+
+.ticket-cut span{
+    width: 5px;
+    height: 10px;
+    background-color: black;
+}
+
+
+
+.ticket-info__head--young, .ticket-info__footer--young,.ticket-cost__head--young, .ticket-cost__footer--young{
+    background-color: var(--clr-primary-1);
+}
