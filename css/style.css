@@ -36,6 +36,10 @@ body{
     display: grid;
     place-items: center;
     height: 100vh;
+    background-image: url(../img/img2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
 }
 
 
@@ -43,68 +47,41 @@ body{
     TAG SEMANTICI
   ╚═══════════════╝*/
 
+
 .ticket{
-    width: 500px;
-    display: grid;
-    grid-template-columns: 3fr 32px 1fr;
-}
-
-.ticket-info, .ticket-cost{
-    height: 100%;
-    border-radius: var(--border-radius);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--gutter-md);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid black;
     overflow: hidden;
-    background-color: bisque;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.ticket__header{
+  padding: var(--gutter-md);
+  background-color: black;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.ticket__body{
+  padding: var(--gutter-md);
 
 }
 
-.ticket-info__head,.ticket-info__footer,.ticket-cost__head,.ticket-cost__footer{
-    padding: var(--gutter-sm);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.8);
-    text-transform: uppercase;
-    font-weight: 700;
+.ticket__body p:nth-child(1),.ticket__body p:nth-child(3){
+  font-weight: 700;
 }
 
-.ticket-info__body{
-    padding: var(--gutter-sm);
-    display: grid;
-    gap: var(--gutter-sm);
+.ticket__body p:nth-child(2){
+  color: crimson;
 }
 
-.ticket-info__body>div{
-    display: flex;
-    gap: var(--gutter-xs);
-
-}
-
-.ticket-info__body div>i{
-    
-}
-
-.ticket-cut{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: var(--border-radius);
-    background-color: bisque;
-    padding: var(--gutter-md);
-}
-
-.ticket-cut span{
-    width: 5px;
-    height: calc(75%/10);
-    margin-bottom: 3px;
-    background-color: black;
-}
-
-
-
-.ticket-info__head--young, .ticket-info__footer--young,.ticket-cost__head--young, .ticket-cost__footer--young{
-    background-color: var(--clr-primary-1);
+.ticket__footer{
+  padding: var(--gutter-md);
+  padding-top: 0;
 }

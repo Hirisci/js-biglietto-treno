@@ -16,30 +16,18 @@
     <title>Nuovo Progetto</title>
 </head>
 <body>
-    <div class="ticket">
-       <div class="ticket-info">
-           <div class="ticket-info__head"><p>Biglietto treni XYZ</p><i class="fa-brands fa-fantasy-flight-games"></i></i></div>
-           <div class="ticket-info__body">
-               <div><i class="fa-solid fa-circle-user"></i><p id="nome-completo"></p>Test Test</div>
-               <div><i class="fa-solid fa-location-dot"></i><p id="city">destinazione</p></div>
-               <div><i class="fa-solid fa-train"></i><p>GTA42</p></div>
-               <div>test</div>
-               <div>test</div>
-               <div>test</div>
-               <div>test</div>
-        </div>
-        <div class="ticket-info__footer">Biglietto intero</div>           
-       </div>
-       <div class="ticket-cut">
-           <span></span><span></span><span></span><span></span><span></span>
-       </div>
-       <div class="ticket-cost">
-           <div class="ticket-cost__head">Ricevuta</div>
-           <div class="ticket-cost__body">aaa</div>
-           <div class="ticket-cost__footer">intero</div>
-       </div>                
-    </div>
 
+    <div class="ticket">
+        <div class="ticket__header" id="tipo_biglietto">biglietto </div>
+        <div class="ticket__body">
+            <p>Prezzo intero tratta <span id="price"></span></p>
+            <p id="promo"></p>
+            <p id="final_price"></p>
+        </div>
+        <div class="ticket__footer">Grazie per averci scelto</div>
+
+    </div>
+        
 
     <script src="js/main.js"></script>
 </body>

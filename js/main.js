@@ -9,12 +9,26 @@ let kmPrice= 0.21;
 let price;
 if(age<18){
     price=kmTrip*kmPrice;
-    price-=price*0.2
+    document.getElementById("price").innerHTML=new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price);
+    price=price-price*0.2;
+    document.getElementById("tipo_biglietto").innerHTML += "Under 18";
+    document.getElementById("promo").innerHTML = "Sconto 20%" ;
+    document.getElementById("final_price").innerHTML= `Prezzo ridotto ${new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price)}`;
+    
+
+    
 }else if(age>64){
     price=kmTrip*kmPrice;
-    price-=price*0.4
+    document.getElementById("price").innerHTML=new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price);
+    price=price-price*0.4;
+    document.getElementById("tipo_biglietto").innerHTML += "Over 65";
+    document.getElementById("promo").innerHTML = "Sconto 40%" ;
+    document.getElementById("final_price").innerHTML= `Prezzo ridotto ${new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price)}`;
+    
 }else{
     price=kmTrip*kmPrice;
+    document.getElementById("price").innerHTML=price=new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price);
+    document.getElementById("tipo_biglietto").innerHTML += "Intero";    
 }
 
 
