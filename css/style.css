@@ -1,0 +1,53 @@
+/*╔═══════════════╗
+      VARIABILI
+  ╚═══════════════╝*/
+
+ :root{
+    /*- COLORI PRIMARIO -*/
+    --clr-primary-0: black;
+
+    /*- COLORI SECONDARIO -*/
+    --clr-secondary-0: white;
+
+    /*- DIMENSIONI GUTTER*/
+    --gutter-xs: .25rem
+    --gutter-sm: .5rem;
+    --gutter-md: 1rem;
+    --gutter-lg: 1.5rem;
+    --gutter-xl: 2rem;
+    --gutter-xxl: 3rem;
+
+}
+
+/*╔═══════════════╗
+       DEBUG
+  ╚═══════════════╝*/
+  .debug header{
+      background-color: aqua;
+  }
+
+  .debug aside{
+      background-color: black;
+  }
+
+  .debug .content{
+      background-color: coral;
+  }
+  
+  .debug footer{
+      background-color: brown;
+  }
+  
+/*╔═══════════════╗
+       COMMON
+  ╚═══════════════╝*/
+body{
+    font-family: 'rotobo' sans-serif;
+    color: var(--colore-testo);
+}
+
+
+/*╔═══════════════╗
+    TAG SEMANTICI
+  ╚═══════════════╝*/
+/*  */
