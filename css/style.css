@@ -68,14 +68,23 @@ body{
     background-color: rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
     font-weight: 700;
-    font-size: .75rem;
 }
 
 .ticket-info__body{
+    padding: var(--gutter-sm);
     display: grid;
     gap: var(--gutter-sm);
 }
 
+.ticket-info__body>div{
+    display: flex;
+    gap: var(--gutter-xs);
+
+}
+
+.ticket-info__body div>i{
+    
+}
 
 .ticket-cut{
     display: flex;

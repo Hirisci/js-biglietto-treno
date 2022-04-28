@@ -9,21 +9,17 @@ let kmPrice= 0.21;
 let price;
 if(age<18){
     price=kmTrip*kmPrice;
-    document.getElementById("price").innerHTML= `<div class="row"><p>Prezzo biglietto</p><p class="dis">${price}</p></div>`
     price-=price*0.2
-    document.getElementById("price").innerHTML+=`<div class="row"><p>Riduzione young</p><p class="dis">${price}</p></div>`
 }else if(age>64){
     price=kmTrip*kmPrice;
-    document.getElementById("price").innerHTML= `<div class="row"><p>Prezzo biglietto</p><p class="dis">${price}</p></div>`
     price-=price*0.4
-    document.getElementById("price").innerHTML+=`<div class="row"><p>Riduzione old</p><p class="dis">${price}</p></div>`
 }else{
     price=kmTrip*kmPrice;
-    document.getElementById("price").innerHTML= `<div class="row"><p>Prezzo biglietto</p><p class="dis">${price}</p></div>`
 }
 
+
 // price=new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price);
-// console.log(price);
+console.log(price);
 // expected output: "123.456,79 €"
 
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
