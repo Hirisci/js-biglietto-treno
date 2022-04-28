@@ -45,26 +45,35 @@ body{
 
 .ticket{
     width: 500px;
-    display: flex;
-    align-items: center;
     display: grid;
-    grid-template-columns: 3fr 25px 1fr;
+    grid-template-columns: 3fr 32px 1fr;
 }
 
 .ticket-info, .ticket-cost{
-    place-self: center stretch;
+    height: 100%;
     border-radius: var(--border-radius);
     overflow: hidden;
     background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
-.ticket-info__head,.ticket-info__footer{
+.ticket-info__head,.ticket-info__footer,.ticket-cost__head,.ticket-cost__footer{
     padding: var(--gutter-sm);
     color: white;
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75rem;
+}
 
+.ticket-info__body{
+    display: grid;
+    gap: var(--gutter-sm);
 }
 
 
@@ -80,7 +89,8 @@ body{
 
 .ticket-cut span{
     width: 5px;
-    height: 10px;
+    height: calc(75%/10);
+    margin-bottom: 3px;
     background-color: black;
 }
 
