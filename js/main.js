@@ -38,7 +38,7 @@ btnReset.addEventListener('click',
         ticketHide.style = "display: none";
         inputName.value = "";
         inputKM.value= "";
-        inputType.value= "";
+        inputType.value= "intero";
     }
 );
 
