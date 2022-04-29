@@ -42,46 +42,85 @@ body{
     background-blend-mode: darken;
 }
 
+/*--- TYPO ---*/
+
+h1{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+h4{
+ text-transform: uppercase;
+ font-size: 1rem;
+}
 
 /*╔═══════════════╗
     TAG SEMANTICI
   ╚═══════════════╝*/
 
-
 .ticket{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    border-radius: var(--gutter-md);
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 1px solid black;
-    overflow: hidden;
-    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: var(--gutter-md);
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  border: 1px solid black;
 }
 
 .ticket__header{
-  padding: var(--gutter-md);
-  background-color: black;
-  color: white;
-  text-transform: capitalize;
-  font-weight: 700;
-}
-
-.ticket__body{
+  text-align: center;
   padding: var(--gutter-md);
 
 }
 
-.ticket__body p:nth-child(1),.ticket__body p:nth-child(3){
-  font-weight: 700;
+.ticket__form{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: var(--gutter-md);
+  margin: var(--gutter-sm);
 }
 
-.ticket__body p:nth-child(2){
-  color: crimson;
+.ticket__form>*{
+  margin: var(--gutter-md);
+  display: flex;
+  flex-direction: column;
 }
 
-.ticket__footer{
+.ticket__form div label{
+  margin-bottom: var(--gutter-sm);
+}
+
+.btn{
+  border: 1px solid black;
+  background-color: lightgray;
+  padding: var(--gutter-sm) var(--gutter-md);
+  font-weight: 600;
+  border-radius: var(--gutter-sm);
+  
+}
+
+.ticket__info{
   padding: var(--gutter-md);
-  padding-top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: var(--gutter-md);
+  margin: var(--gutter-sm);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr ;
+  font-size: .75rem;
+  place-items: center;
 }
+
+.ticket__info>*{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: var(--gutter-sm);
+  text-align: center;
+}
+
+.ticket__info div:first-child{
+  font-weight: 600 ;
+}
+
+

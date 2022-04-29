@@ -18,14 +18,56 @@
 <body>
 
     <div class="ticket">
-        <div class="ticket__header" id="tipo_biglietto">biglietto </div>
-        <div class="ticket__body">
-            <p>Prezzo intero tratta <span id="price"></span></p>
-            <p id="promo"></p>
-            <p id="final_price"></p>
+        <div class="ticket__header">
+            <h1>Genera il tuo biglietto</h1>
+            <div class="ticket__form">
+                <div >
+                    <label for="ticket-name">Nome e Cognome</label>
+                    <input id="full-name" type="text">
+                </div>
+                <div>
+                    <label for="ticket-km">KM del viaggio</label>
+                    <input id="km" type="number"></div>
+                <div>
+                    <label for="type">Seleziona tipo biglietto</label>
+                    <select name="ticket-type" id="type">
+                        <option value="intero">intero</option>
+                        <option value="under">Young 18</option>
+                        <option value="mercedes">Over 65</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ticket__btn-list">
+                <button class="btn" id="btn-generate">Genera</button>
+                <button class="btn" id="btn-reset">Reset</button>
+            </div>
         </div>
-        <div class="ticket__footer">Grazie per averci scelto</div>
 
+        <div class="wrapper">
+            <h1>Il tuo biglietto</h1>
+            <div class="ticket__info">
+                <div>
+                    <h4>nome passeggero</h4>
+                    <div>test test</div>
+                </div>
+                <div>
+                    <h4>tipo biglietto</h4>
+                    <div>Interno</div>
+                </div>
+                <div>
+                    <h4>treno</h4>
+                    <div>AG34569</div>
+                </div>
+                <div>
+                    <h4>carrozza</h4>
+                    <div>12</div>
+                </div>
+                <div>
+                    <h4>prezzo biglietto</h4>
+                    <div>10.00</div>
+                </div>
+            </div>
+        </div>
     </div>
         
 
