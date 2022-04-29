@@ -59,6 +59,10 @@ h4{
     TAG SEMANTICI
   ╚═══════════════╝*/
 
+.wrapper{
+  display: none;
+}
+
 .ticket{
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: var(--gutter-md);
